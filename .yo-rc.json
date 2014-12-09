@@ -1,0 +1,12 @@
+{
+  "generator-backbone": {
+    "appPath": "app",
+    "appName": "HNThread",
+    "coffee": true,
+    "testFramework": "nada",
+    "templateFramework": "lodash",
+    "compassBootstrap": true,
+    "includeRequireJS": false
+  },
+  "generator-mocha": {}
+}
