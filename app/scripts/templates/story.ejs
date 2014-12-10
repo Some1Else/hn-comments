@@ -1,5 +1,10 @@
-<h1><center><%= this.model.get('text') %></center></h1>
-<p><center><%= this.model.get('url') %></center></p>
+<% if (this.model.get('url') != undefined) { %>
+	<h1><center><%= this.model.get('title') %></center></h1>
+	<% if (this.model.get('text') != undefined && this.model.get('text') > 0) { %>
+		<h2><center><%= this.model.get('text') %></center></h2>
+	<% } %>
+	<p><center><%= this.model.get('url') %> | <%= this.model.get('by') %> | <%= this.model.get('score') %> points</center></p>
+<% } %>
 <% if (this.model.get('kids') == undefined) { %>
 	
 	<h1><center>Loading story</center></h1>
@@ -8,7 +13,7 @@
 	
 	<% if (this.model.get('kids').length == 0) { %>
 
-		<h1><center>No comments to this story on HN</center></h1>
+		<h3><center>No comments</center></h3>
 
 	<% } %>
 <% } %>
