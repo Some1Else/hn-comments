@@ -1,10 +1,14 @@
-<hr>
+<% if (this.model.get('text') != undefined && this.model.get('text').length > 0) { %>
 
-<p><%= this.model.get('text') %></p>
+	<hr>
 
-<p><small>
-	by <%= this.model.get('by') %>
-	<% if (this.model.get('kids') != undefined && this.model.get('kids').length > 0) { %>
-		| <%= this.model.get('kids').length %> replies
-	<% } %>
-</small></p>
+	<p><%= this.model.get('text') %></p>
+
+	<p><small>
+		<strong><%= this.model.get('by') %></strong>
+		<% if (this.model.get('kids') != undefined && this.model.get('kids').length > 0) { %>
+			| <%= this.model.get('kids').length %> replies
+		<% } %>
+	</small></p>
+
+<% } %>
