@@ -30,19 +30,26 @@
                 <h3 class="text-muted">HNThread</h3>
             </div>
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+            <div class="jumbotron" id="query">
+                <h1>Try it out!</h1>
+                <p class="lead">Get HN comments on your story</p>
+                <p class="lead"><input type='text' placeholder="Paste a story URL here" size='42' id="term" name="term"></p>
+                <p><a class="btn btn-lg btn-success" href="#">Show HNThread</a></p>
             </div>
+            <div class="row">
+            <div class="col-lg-12" id="results">
+            </div>
+            </div>
+
+            <!--
 
             <div class="row text-left">
                 <div class="col-md-offset-4">
-                    <h2>Now Try,</h2>
-                    <h4><b>yo backbone:router</b> &lt;router&gt;</h4>
-                    <h4><b>yo backbone:collection</b> &lt;collection&gt;</h4>
-                    <h4><b>yo backbone:model </b> &lt;model&gt;</h4>
-                    <h4><b>yo backbone:view </b> &lt;view&gt;</h4>
+                    <h2>LSD Experimental</h2>
+                    <h4><b>yo momma</b> &lt;momma&gt;</h4>
+                    <h4><b>yo papa</b> &lt;papa&gt;</h4>
+                    <h4><b>yo sister </b> &lt;sister&gt;</h4>
+                    <h4><b>yo brother </b> &lt;brother&gt;</h4>
                 </div>
             </div>
 
@@ -69,8 +76,10 @@
                 </div>
             </div>
 
+            -->
+
             <div class="footer">
-                <p>♥ from the Yeoman team</p>
+                <center><p>♥ 2014 FML</p></center>
             </div>
 
         </div>
@@ -111,13 +120,15 @@
 
         <!-- build:js({.tmp,app}) scripts/main.js -->
         <script src="scripts/main.js"></script>
-        <script src="scripts/templates.js"></script>
+        <script src="scripts/routes/app.js"></script>
         <script src="scripts/models/item.js"></script>
-        <script src="scripts/collections/item.js"></script>
-        <script src="scripts/routes/item.js"></script>
-        <script src="scripts/views/item.js"></script>
-        <script src="scripts/collections/top_stories.js"></script>
-        <script src="scripts/models/user.js"></script>
+        <script src="scripts/models/query.js"></script>
+        <script src="scripts/templates.js"></script>
+        <script src="scripts/views/base.js"></script>
+        <script src="scripts/views/story.js"></script>
+        <script src="scripts/views/no_story.js"></script>
+        <script src="scripts/views/comment.js"></script>
+        <script src="scripts/views/query.js"></script>
         <!-- endbuild -->
 </body>
 </html>

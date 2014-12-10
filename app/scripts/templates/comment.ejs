@@ -1,0 +1,10 @@
+<hr>
+
+<p><%= this.model.get('text') %></p>
+
+<p><small>
+	by <%= this.model.get('by') %>
+	<% if (this.model.get('kids') != undefined && this.model.get('kids').length > 0) { %>
+		| <%= this.model.get('kids').length %> replies
+	<% } %>
+</small></p>

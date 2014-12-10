@@ -1,0 +1,14 @@
+<h1><center><%= this.model.get('text') %></center></h1>
+<p><center><%= this.model.get('url') %></center></p>
+<% if (this.model.get('kids') == undefined) { %>
+	
+	<h1><center>Loading story</center></h1>
+
+<% } else { %>
+	
+	<% if (this.model.get('kids').length == 0) { %>
+
+		<h1><center>No comments to this story on HN</center></h1>
+
+	<% } %>
+<% } %>

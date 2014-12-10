@@ -6,8 +6,8 @@ window.HNThread =
   init: ->
     'use strict'
 
-    @router = new HNThread.Routers.Item 
-    Backbone.history.start(pushtate: true)
+    @app = new HNThread.Routers.App 
+    Backbone.history.start(pushState: false)
 
     console.log 'init'
 
