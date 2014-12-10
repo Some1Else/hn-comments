@@ -25,5 +25,13 @@ class HNThread.Views.Query extends Backbone.View
     else
       @router.navigate "no_story", trigger: true
 
+  update: (story) ->
+    $('#term').val(story.get('url'))
+    story.once 'change:url', ->
+      $('#term').val(story.get('url'))
+
+  initialize: (options) ->
+    @router = options.router
+
   render: () ->
     @$el.html @template(@model.toJSON())
